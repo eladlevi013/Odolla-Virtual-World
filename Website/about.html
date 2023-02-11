@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="rtl">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>אודולה | עולם וירטואלי</title>
+
+    <style type="text/css">
+      canvas {
+          padding: 0;
+          margin: auto;
+          display: block;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #006cff;
+      }
+
+      .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #0099ff;
+        color: white;
+      }
+
+      body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .bg {
+        /* The image used */
+        background-image: url("back.png");
+
+        /* Full height */
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #unity-canvas {
+          border-radius: 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+    </style>
+  </head>
+
+  <body style="text-align: center; background-image: url(back.jpg);">
+
+    <div class="bg">
+      <div class="topnav" style="direction: rtl;">
+        <a href="index.html">בית</a>
+        <a href="news.html">חדשות</a>
+        <a class="active" href="about.html">אודות</a>
+      </div>
+    </div>
+    
+    <script src="./removeBanner.js"></script>
+  </body>
+</html>

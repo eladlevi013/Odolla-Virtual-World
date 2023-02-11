@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1024663550527",
+    "firebase_url": "https://odolla-virtual-world.firebaseio.com",
+    "project_id": "odolla-virtual-world",
+    "storage_bucket": "odolla-virtual-world.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024663550527:android:6088d7bfcce550df1cd68a",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.Odolla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024663550527-9r5v3bf1n5rvm7083658si560ajoh5h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6YxuYa9Va7qGHiQ75CsahQFdLqBjNlLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024663550527-9r5v3bf1n5rvm7083658si560ajoh5h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

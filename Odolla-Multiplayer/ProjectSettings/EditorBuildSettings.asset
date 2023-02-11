@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LoginPage.unity
+    guid: 463769abc802bc846ac18d396f018cdd
+  - enabled: 1
+    path: Assets/Scenes/Ringo's Hill.unity
+    guid: 28e0e0238434b184e8e74170173f744c
+  - enabled: 1
+    path: Assets/Scenes/Layla's Path.unity
+    guid: 2d900728a78d616418f87d9ead1a5c3b
+  - enabled: 1
+    path: Assets/Scenes/Bonny's Avenue.unity
+    guid: 4c1be5acf0d54924ba363d01b92a7428
+  - enabled: 1
+    path: Assets/Scenes/Apple's Game.unity
+    guid: 44ea7c1d6e07b504cb52bfa9dc24f85c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/ManagerRoom.unity
+    guid: 582ada4f6fddcd84fb4b0865900eb377
+  - enabled: 1
+    path: Assets/Scenes/BubbleStruggle.unity
+    guid: 361f292d181a3d24da90af1f4ef42232
+  m_configObjects: {}
