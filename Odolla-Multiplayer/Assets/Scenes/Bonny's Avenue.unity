@@ -9773,7 +9773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 245987820}
         m_TargetAssemblyTypeName: OtherPlayerCardFunctionality, Assembly-CSharp
-        m_MethodName: close
+        m_MethodName: closeCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -644,14 +644,16 @@ public class Store : MonoBehaviour
         DocumentReference docRef = db.Collection("users").Document(displayName);
         DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
 
-        int money = await Main.Instance.FirebaseHelper.GetCoins();
-        if (money - selected_item_price >= 0)
+        playerCoins = await Main.Instance.FirebaseHelper.GetCoins();
+        if (playerCoins - selected_item_price >= 0)
         {
             // Update the user's money
-            money -= selected_item_price;
+            playerCoins -= selected_item_price;
+            money.text = playerCoins.ToString();
+
             Dictionary<string, object> user = new Dictionary<string, object>
             {
-                { "coins", money }
+                { "coins", playerCoins }
             };
             await docRef.UpdateAsync(user);
 
