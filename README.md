@@ -1,5 +1,7 @@
 # Odolla-Virtual-World
-Multiplayer Unity virtual world game with Photon and Firebase as a server
+Multiplayer Unity virtual world game with Photon and Firebase as a server<br/>
+in order to setup this project, you'll have to download the Firebase SDK 
+from: `https://firebase.google.com/download/unity?hl=he` and import the FirebaseFirestore and FirebaseAuth Unity Packages.
 
 # Unity Game Demonstration
 <p align="center" width="80%">
