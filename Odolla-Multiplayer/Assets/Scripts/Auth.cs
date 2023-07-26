@@ -122,7 +122,7 @@ public class Auth : MonoBehaviour
         }
         else
         {
-            User = LoginTask.Result;
+            User = LoginTask.Result.User;
 
             // Client login changes
             OnSceneSpawn.player_name = User.DisplayName;
@@ -173,7 +173,7 @@ public class Auth : MonoBehaviour
             else
             {
                 //User has now been created
-                User = RegisterTask.Result;
+                User = RegisterTask.Result.User;
 
                 if (User != null)
                 {
