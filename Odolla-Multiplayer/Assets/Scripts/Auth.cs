@@ -5,11 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Mail;
-using System.Net;
-using UnityEngine.SocialPlatforms.Impl;
 using Firebase;
 using Firebase.Auth;
 using System;
@@ -46,6 +41,12 @@ public class Auth : MonoBehaviour
     const String LOGIN_WRONG_PASSWORD_ERROR_HEB = "סיסמא שגויה";
     const String LOGIN_INVALID_EMAIL_ERROR_HEB = "אימייל לא תקין";
     const String LOGIN_ACCOUNT_NOT_EXISTS_ERROR_HEB = "משתמש לא קיים";
+
+    // register error messages
+    const String REGISTER_MISSING_EMAIL_HEB = "אימייל לא תקין";
+    const String REGISTER_MISSING_PASSWORD_HEB = "סיסמא חסרה";
+    const String REGISTER_WEAK_PASSWORD_HEB = "סיסמא חלשה";
+    const String REGISTER_EMAIL_IN_USE_HEB = "מייל זה כבר נמצא בשימוש";
 
     void Awake()
     {
@@ -151,23 +152,26 @@ public class Auth : MonoBehaviour
                 Debug.LogWarning(message: $"Failed to register task with {RegisterTask.Exception}");
                 FirebaseException firebaseEx = RegisterTask.Exception.GetBaseException() as FirebaseException;
                 AuthError errorCode = (AuthError)firebaseEx.ErrorCode;
-
-                string message = "Register Failed!";
+                Debug.Log(errorCode);
+                string message = "הרשמת המשתמש נכשלה";
                 switch (errorCode)
                 {
-                    case AuthError.MissingEmail:
-                        message = "Missing Email";
+                    case AuthError.InvalidEmail:
+                        message = REGISTER_MISSING_EMAIL_HEB;
                         break;
                     case AuthError.MissingPassword:
-                        message = "Missing Password";
+                        message = REGISTER_MISSING_PASSWORD_HEB;
                         break;
                     case AuthError.WeakPassword:
-                        message = "Weak Password";
+                        message = REGISTER_WEAK_PASSWORD_HEB;
                         break;
                     case AuthError.EmailAlreadyInUse:
-                        message = "Email Already In Use";
+                        message = REGISTER_EMAIL_IN_USE_HEB;
                         break;
                 }
+
+                error_text.text = message;
+                error_popup.SetActive(true);
                 Debug.LogWarning(message);
             }
             else

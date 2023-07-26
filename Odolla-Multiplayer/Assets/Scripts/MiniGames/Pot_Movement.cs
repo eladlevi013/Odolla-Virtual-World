@@ -7,11 +7,11 @@ using TMPro;
 
 public class Pot_Movement : MonoBehaviour
 {
-
     public GameObject Apple;
     bool playing = true;
     float Speed = 3f;
     int Score = -1;
+    bool gameOver = false;
 
     public GameObject EndGameCanvas;
     public Text scoreText;
@@ -39,7 +39,6 @@ public class Pot_Movement : MonoBehaviour
     void IfGameObjectIsNear()
     {
         float dist = Vector3.Distance(transform.position, Apple.transform.position);
-        //Debug.Log(dist);
 
         if (dist < 1.5)
         {
@@ -62,10 +61,14 @@ public class Pot_Movement : MonoBehaviour
 
     public async void EndGame()
     {
-        await (Main.Instance.FirebaseHelper.UpdateUsersCoins(Score));
-        playing = false;
-        ScoreTextInCanvasEnd.text = " םייתסה קחשמה\n" + " תועבטמ " + Score + "-ב םתיכזו";
-        EndGameCanvas.SetActive(true);
+        if (!gameOver)
+        {
+            gameOver = true;
+            await (Main.Instance.FirebaseHelper.UpdateUsersCoins(Score));
+            playing = false;
+            ScoreTextInCanvasEnd.text = " םייתסה קחשמה\n" + " תועבטמ " + Score + "-ב םתיכזו";
+            EndGameCanvas.SetActive(true);
+        }
     }
 
     public void closeWindow()

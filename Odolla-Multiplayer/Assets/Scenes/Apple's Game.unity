@@ -310,7 +310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1662471596}
         m_TargetAssemblyTypeName: Pot_Movement, Assembly-CSharp
-        m_MethodName: ENDGAME
+        m_MethodName: EndGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
